@@ -1,0 +1,827 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class UnitConverter : Form
+    {
+        public UnitConverter()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLengthFrom_Click(object sender, EventArgs e)
+        {
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.001);
+            }
+
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Meter")
+                {
+                    txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+                }
+        
+
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 100);
+                  
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1609.344);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1.094);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3.281);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Meter" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 39.37);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000);
+                
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 100000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1.609);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1093.613);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3280.84);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Kilometer" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 39370.079);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 100);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.00001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 10);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 10000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 10000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 160934.4);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 91.44);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 30.48);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Centimeter" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 2.54);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.000001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 10);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 6.213688756E-7);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 914.4);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 304.8);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Millimeter" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 25.4);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.000001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 9.999999999E-10);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 10000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 6.213688756E-10);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 914400);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 304800);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Micrometer" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 25400);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.0000000010);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.000000000001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.0000001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.000001);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1000);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 6.213688756E-13);
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1.093613298E-9);
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3.280839895E-9);
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3.937007874E-8);
+            }
+            if (lstLengthFrom.SelectedItem == "Nanometer" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3.937007874E-8);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1609.344);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1.609);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 160934.4);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1609350);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1609350000);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1609350000000);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 5280);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1760);
+            }
+            if (lstLengthFrom.SelectedItem == "Mile" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 63360);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1.094);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1093.613);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 91.44);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 914.4);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 914400);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 914400000);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 1760);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 3);
+            }
+            if (lstLengthFrom.SelectedItem == "Yard" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 36);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 3.281);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 3280.84);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 30.48);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 304.8);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 304800);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 304800000);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 5280);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 3);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+            }
+            if (lstLengthFrom.SelectedItem == "Foot" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 12);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Meter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 39.37);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Kilometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 39370.079);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Centimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 2.54);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Millimeter")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 25.4);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Micrometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 25400);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Nanometer")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 25400000);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Mile")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 0.0000157828);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Yard")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 36);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Foot")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) / 12);
+            }
+            if (lstLengthFrom.SelectedItem == "Inch" && lstLengthTo.SelectedItem == "Inch")
+            {
+                txtLengthTo.Text = Convert.ToString(Convert.ToDouble(txtLengthFrom.Text) * 1);
+            }
+
+
+
+
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstTemperatureFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTemperatureTo_Click(object sender, EventArgs e)
+        {
+            if (lstTemperatureFrom.SelectedItem == "Celsius" && lstTemperatureTo.SelectedItem == "Celsius")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Celsius" && lstTemperatureTo.SelectedItem == "Kelvin")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1+273.15);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Celsius" && lstTemperatureTo.SelectedItem == "Fahrenheit")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1 *9/5+32);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Kelvin" && lstTemperatureTo.SelectedItem == "Celsius")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1 - 273.15);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Kelvin" && lstTemperatureTo.SelectedItem == "Kelvin")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Kelvin" && lstTemperatureTo.SelectedItem == "Fahrenheit")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * (1-273.15) * 9/5 +32);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Fahrenheit" && lstTemperatureTo.SelectedItem == "Celsius")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * (1 - 32) * 5 / 9);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Fahrenheit" && lstTemperatureTo.SelectedItem == "Kelvin")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * (1 - 32) * 5/9 + 273.15);
+            }
+            if (lstTemperatureFrom.SelectedItem == "Fahrenheit" && lstTemperatureTo.SelectedItem == "Fahrenheit")
+            {
+                txtTemperatureTo.Text = Convert.ToString(Convert.ToDouble(txtTemperatureFrom.Text) * 1);
+            }
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstWeightFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnWeightTo_Click(object sender, EventArgs e)
+        {
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 1000);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 0.000001);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 453592.37);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 28349.523);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 200);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 1000000000);
+            }
+            if (lstWeightFrom.SelectedItem == "Milligram" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 100000);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1000);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 1000);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 453.592);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 28.35);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 5);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 0.000001);
+            }
+            if (lstWeightFrom.SelectedItem == "Gram" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 100);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1000000);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1000);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 2.205);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 35.274);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 5000);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 1000);
+            }
+            if (lstWeightFrom.SelectedItem == "Kilogram" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 10);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 453592.37);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 453.592);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 2.205);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 16);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 2267.962);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 2204.623);
+            }
+            if (lstWeightFrom.SelectedItem == "Pound" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 4.536);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 28349.523);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 28.35);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 35.274);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 16);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 141.748);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 35273.962);
+            }
+            if (lstWeightFrom.SelectedItem == "Ounce" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 3.527);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 200);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 5);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 5000);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) /2267.962);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 141.748);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 5000000);
+            }
+            if (lstWeightFrom.SelectedItem == "Carat" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 500);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 0.0000000010000);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 0.0000010000);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 0.0010000);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 2204.623);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 35273.962);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 5000000);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+            if (lstWeightFrom.SelectedItem == "Ton" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 10000);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Milligram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 100000);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Gram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 100);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Kilogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 10);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Pound")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 4.536);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Ounce")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text)  * 3.527);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Carat")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 500);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Ton")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) / 10000);
+            }
+            if (lstWeightFrom.SelectedItem == "Hectogram" && lstWeightTo.SelectedItem == "Hectogram")
+            {
+                txtWeightTo.Text = Convert.ToString(Convert.ToDouble(txtWeightFrom.Text) * 1);
+            }
+
+        }
+    }
+}
